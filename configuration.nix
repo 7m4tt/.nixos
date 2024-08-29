@@ -6,8 +6,11 @@
         isNormalUser = true;
         extraGroups = [ "networkmanager" "wheel" "openrazer" ];
         packages = with pkgs; [
-            firefox
+            rofi-wayland
+	    firefox
             kitty
+	    badlion-client
+	    vscode
         ];
     };
 
@@ -61,21 +64,24 @@
     nixpkgs.config.allowUnfree = true;
     services.xserver.videoDrivers = ["nvidia"];
     hardware = {
+    	graphics.enable = true;
         nvidia = {
             package = config.boot.kernelPackages.nvidiaPackages.beta;
             open = false;
+	    nvidiaSettings = false;
             modesetting.enable = true;
-            powerManagement = {
-                enable = true;
-                finegrained = true;
-            };
+            #powerManagement = {
+            #    enable = true;
+            #    finegrained = true;
+            #};
             prime = {
-                offload = {
-                    enable = true;
-                    enableOffloadCmd = true;
-                };
+	        sync.enable = true;
+                #offload = {
+                #    enable = true;
+                #    enableOffloadCmd = true;
+                #};
                 nvidiaBusId = "PCI:1:0:0";
-                amdgpuBusId = "PCI:101:0:0";
+                amdgpuBusId = "PCI:65:0:0";
             };
         };
     };
@@ -89,6 +95,7 @@
     # System Packages.
     environment.systemPackages = with pkgs; [
         neovim
+	htop
         git
         openrazer-daemon
     ];
