@@ -7,10 +7,11 @@
         extraGroups = [ "networkmanager" "wheel" "openrazer" ];
         packages = with pkgs; [
             rofi-wayland
-	    firefox
+	        firefox
             kitty
-	    badlion-client
-	    vscode
+	        badlion-client
+	        vscode
+            waybar
         ];
     };
 
