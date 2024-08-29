@@ -17,7 +17,7 @@
     
     # Bootloader.
     boot = {
-        cleanTmpDir = true;
+        tmp.cleanOnBoot = true;
         loader = {
             timeout = 1;
             efi.canTouchEfiVariables = true;
