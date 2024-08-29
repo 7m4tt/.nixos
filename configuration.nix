@@ -61,9 +61,9 @@
     nixpkgs.allowUnfree = true;
     services.xserver.videoDrivers = ["nvidia"];
     hardware = {
-        package = config.boot.kernelPackages.nvidiaPackages.beta;
-        open = false;
         nvidia = {
+            package = config.boot.kernelPackages.nvidiaPackages.beta;
+            open = false;
             modesetting.enable = true;
             powerManagement = {
                 enable = true;
