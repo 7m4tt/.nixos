@@ -63,18 +63,20 @@
     hardware = {
         package = config.boot.kernelPackages.nvidiaPackages.beta;
         open = false;
-        modesetting.enable = true;
-        powerManagement = {
-            enable = true;
-            finegrained = true;
-        };
-        prime = {
-            offload = {
-		        enable = true;
-		        enableOffloadCmd = true;
-	        };
-            nvidiaBusId = "PCI:1:0:0";
-            amdgpuBusId = "PCI:101:0:0";
+        nvidia = {
+            modesetting.enable = true;
+            powerManagement = {
+                enable = true;
+                finegrained = true;
+            };
+            prime = {
+                offload = {
+                    enable = true;
+                    enableOffloadCmd = true;
+                };
+                nvidiaBusId = "PCI:1:0:0";
+                amdgpuBusId = "PCI:101:0:0";
+            };
         };
     };
 
