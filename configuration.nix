@@ -115,8 +115,6 @@
     environment = {
         sessionVariables.NIXOS_OZONE_WL = "1";
         variables = {
-            NIXOS_CONFIG = "$HOME/.nixos/configuration.nix";
-            NIXOS_CONFIG_DIR = "$HOME/.nixos/";
             EDITOR = "nvim";
         };
 
