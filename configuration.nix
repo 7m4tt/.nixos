@@ -12,6 +12,7 @@
 	        badlion-client
 	        vscode
             waybar
+            hyprpaper
         ];
     };
 
