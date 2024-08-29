@@ -13,7 +13,7 @@
 	        vscode
             waybar
             hyprpaper
-            hyprcursor
+            cider
         ];
     };
 
