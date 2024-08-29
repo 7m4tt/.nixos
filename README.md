@@ -1,6 +1,6 @@
 ## Minimal NixOS Configuration
 
-# Contains:
+### Contains:
 - configuration.nix
 - hardware-configuration.nix
 - flake.nix
