@@ -58,7 +58,7 @@
     hardware.openrazer.enable = true;
 
     # Graphics Driver.
-    nixpkgs.allowUnfree = true;
+    nixpkgs.config.allowUnfree = true;
     services.xserver.videoDrivers = ["nvidia"];
     hardware = {
         nvidia = {
